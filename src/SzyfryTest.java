@@ -6,51 +6,53 @@ import static org.junit.jupiter.api.Assertions.*;
 class SzyfryTest {
 
     @Test
-    void szyfrCzearaJezezliKlucz0() {
+    void szyfrCezaraJezeliKlucz0() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("ABC",0));
     }
     @Test
-    void szyfrCzearaMniejszyOdDlugoAlfabetu() {
+    void szyfrCezaraJezeliKluczMniejszodDlugosciAlfabetu() {
         Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",3));
     }
+
     @Test
-    void szyfrCzearaJezeliKluczWiekszyNizDlugoscAlfabetu() {
+    void szyfrCezaraJezeliKluczWiekszyNizDlugoscAlfabetu() {
         Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",81));
     }
     @Test
-    void szyfrCzearaJezeliKluczUjemny() {
+    void szyfrCezaraJezeliKluczUjemny() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("DEF",-3));
     }
     @Test
-    void szyfrCzearaJezezliBezZawijaniaWierszy3(){
-        Assertions.assertEquals("DEF",Szyfry.szyfrCezara("XYZ",3));
+    void szyfrCezaraJezeliBezZawijaniaWierszyKlucz3() {
+        Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",3));
     }
     @Test
-    void szyfrCzearaJezezliZZawijaniaWierszy3(){
+    void szyfrCezaraJezeliZZawijaniemWierszyKlucz3() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("XYZ",3));
     }
     @Test
-    void szyfrCzearaJezezliKlucz0SCII() {
+    void szyfrCezaraJezeliKlucz0ASCII() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("ABC",0));
     }
     @Test
-    void szyfrCzearaMniejszyOdDlugoAlfabetuSCII() {
+    void szyfrCezaraJezeliKluczMniejszodDlugosciAlfabetuASCII() {
         Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",3));
     }
+
     @Test
-    void szyfrCzearaJezeliKluczWiekszyNizDlugoscAlfabetuSCII() {
+    void szyfrCezaraJezeliKluczWiekszyNizDlugoscAlfabetuASCII() {
         Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",81));
     }
     @Test
-    void szyfrCzearaJezeliKluczUjemnySCII() {
+    void szyfrCezaraJezeliKluczUjemnyASCII() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("DEF",-3));
     }
     @Test
-    void szyfrCzearaJezezliBezZawijaniaWierszy3SCII(){
-        Assertions.assertEquals("DEF",Szyfry.szyfrCezara("XYZ",3));
+    void szyfrCezaraJezeliBezZawijaniaWierszyKlucz3ASCII() {
+        Assertions.assertEquals("DEF",Szyfry.szyfrCezara("ABC",3));
     }
     @Test
-    void szyfrCzearaJezezliZZawijaniaWierszy3ASCII(){
+    void szyfrCezaraJezeliZZawijaniemWierszyKlucz3ASCII() {
         Assertions.assertEquals("ABC",Szyfry.szyfrCezara("XYZ",3));
     }
 }
