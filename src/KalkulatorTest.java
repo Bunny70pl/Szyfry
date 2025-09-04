@@ -21,4 +21,52 @@ class KalkulatorTest {
     void testPodzielJezeliLiczbyCalkowitewynikRzeczywsity(){
         Assertions.assertEquals(3.5,Kalkulator.Podziel(7,2));
     }
+    @Test
+    void czyPierwsza1(){
+        Assertions.assertEquals(false,Kalkulator.czyLiczbaPierwsz(1));
+    }
+    @Test
+    void czyPierwsza2(){
+        Assertions.assertEquals(true,Kalkulator.czyLiczbaPierwsz(2));
+    }
+    @Test
+    void czyPierwsza3(){
+        Assertions.assertEquals(true,Kalkulator.czyLiczbaPierwsz(3));
+    }
+    @Test
+    void czyPierwsza17(){
+        Assertions.assertEquals(true,Kalkulator.czyLiczbaPierwsz(17));
+    }
+    @Test
+    void czyPierwsza25(){
+        Assertions.assertEquals(false,Kalkulator.czyLiczbaPierwsz(25));
+    }
+    @Test
+    void czyPierwsza10(){
+        Assertions.assertEquals(false,Kalkulator.czyLiczbaPierwsz(10));
+    }
+    @Test
+    void potegowanieGdyPotegowana0(){
+        Assertions.assertEquals(1,Kalkulator.potega(1,0));
+    }
+    @Test
+    void potegowanie0(){
+        Assertions.assertEquals(0,Kalkulator.potega(0,1));
+    }
+    @Test
+    void potegowanieMinus2(){
+        Assertions.assertEquals(0.25,Kalkulator.potega(2,-2));
+    }
+    @Test
+    void potegowanieObaPlusy(){
+        Assertions.assertEquals(4,Kalkulator.potega(2,2));
+    }
+    @Test
+    void potegowanieObaMinusyParzysta(){
+        Assertions.assertEquals(0.25,Kalkulator.potega(-2,-2));
+    }
+    @Test
+    void potegowanieObaMinusyNieParzysta(){
+        Assertions.assertEquals(-0.125,Kalkulator.potega(-2,-3));
+    }
 }
